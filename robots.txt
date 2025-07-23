@@ -1,6 +1,59 @@
 # Configuración específica para bloquear scrapers en Vercel
 # Este archivo bloquea HTTrack y otros scrapers comunes
 
+# Permitir todos los bots de Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Google-InspectionTool
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Google-AdSense
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: AdsBot-Google-Mobile-Apps
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: FeedFetcher-Google
+Allow: /
+
+User-agent: Google-Read-Aloud
+Allow: /
+
+User-agent: DuplexWeb-Google
+Allow: /
+
+User-agent: googleweblight
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+# Bloquear scrapers maliciosos
 User-agent: HTTrack
 Disallow: /
 
@@ -25,15 +78,13 @@ Disallow: /
 User-agent: Java
 Disallow: /
 
+# Configuración general para otros bots
 User-agent: *
-Crawl-delay: 10
-Disallow: /wp-content/
+Crawl-delay: 5
+Allow: /
 Disallow: /wp-admin/
 Disallow: /.vercel/
 Disallow: /api/
-Disallow: /*.js$
-Disallow: /*.css$
-Disallow: /*.json$
 
-# Sitemap (opcional)
-# Sitemap: https://brujaefectiva.fun/sitemap.xml
+# Sitemap
+Sitemap: https://brujasybrujosonline.arcano.cloud/sitemap.xml
