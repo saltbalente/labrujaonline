@@ -39,10 +39,5 @@
       "source": "/robots.txt",
       "destination": "/robots.txt"
     }
-  ],
-  "functions": {
-    "app/api/block-scrapers.js": {
-      "maxDuration": 10
-    }
-  }
+  ]
 }
