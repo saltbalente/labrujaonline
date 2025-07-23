@@ -1,0 +1,39 @@
+# Configuración específica para bloquear scrapers en Vercel
+# Este archivo bloquea HTTrack y otros scrapers comunes
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: httrack
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: libwww-perl
+Disallow: /
+
+User-agent: python-requests
+Disallow: /
+
+User-agent: python-urllib
+Disallow: /
+
+User-agent: Java
+Disallow: /
+
+User-agent: *
+Crawl-delay: 10
+Disallow: /wp-content/
+Disallow: /wp-admin/
+Disallow: /.vercel/
+Disallow: /api/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.json$
+
+# Sitemap (opcional)
+# Sitemap: https://brujaefectiva.fun/sitemap.xml

@@ -1,0 +1,553 @@
+/*
+=================================================================
+BRUJAEFECTIVA.FUN - DISEÑO MODERNO Y ELEGANTE
+=================================================================
+Archivo: responsive-enhancement.css
+Propósito: Diseño premium con enfoque mobile-first
+Fecha: 23 de Julio de 2025
+=================================================================
+*/
+
+/* ===== VARIABLES CSS PARA DISEÑO MODERNO ===== */
+:root {
+  --primary-color: #9D4EDD;
+  --secondary-color: #FFD60A;
+  --accent-color: #F72585;
+  --text-white: #FFFFFF;
+  --text-gray: #E5E5E5;
+  --text-muted: #B8B8B8;
+  --bg-black: #000000;
+  --bg-dark: #0A0A0A;
+  --bg-card: #1A1A1A;
+  --bg-gradient: linear-gradient(135deg, #000000 0%, #1A1A1A 50%, #000000 100%);
+  --shadow-glow: 0 0 20px rgba(157, 78, 221, 0.3);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-hover: 0 12px 40px rgba(157, 78, 221, 0.4);
+  --border-radius: 16px;
+  --border-radius-lg: 24px;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --max-width: 1200px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+}
+
+/* ===== RESET Y BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg-black) !important;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  background: var(--bg-gradient) !important;
+  color: var(--text-white) !important;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* ===== CONTENEDORES PRINCIPALES ===== */
+.elementor {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+  background: transparent !important;
+}
+
+.e-con-boxed {
+  background: transparent !important;
+  padding: var(--spacing-md) var(--spacing-sm);
+  margin: 0 auto;
+}
+
+.e-con-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  align-items: center;
+  text-align: center;
+  background: transparent !important;
+}
+
+.e-con.e-parent {
+  background: transparent !important;
+  padding: var(--spacing-xl) var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  position: relative;
+}
+
+/* Efectos de fondo alternados más elegantes */
+.e-con.e-parent:nth-child(even) {
+  background: radial-gradient(ellipse at center, rgba(157, 78, 221, 0.05) 0%, transparent 70%) !important;
+}
+
+.e-con.e-parent:nth-child(odd) {
+  background: radial-gradient(ellipse at center, rgba(247, 37, 133, 0.05) 0%, transparent 70%) !important;
+}
+
+/* ===== TIPOGRAFÍA MODERNA ===== */
+.elementor-heading-title {
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-white) !important;
+}
+
+h1.elementor-heading-title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 50%, var(--secondary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  text-shadow: none;
+  position: relative;
+}
+
+h1.elementor-heading-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+  box-shadow: var(--shadow-glow);
+}
+
+h2.elementor-heading-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--text-white) !important;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  position: relative;
+}
+
+h4.elementor-heading-title {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  color: var(--text-gray) !important;
+  line-height: 1.7;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-md) auto;
+}
+
+p.elementor-heading-title {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--text-gray) !important;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-lg) auto;
+  font-weight: 300;
+}
+
+/* ===== IMÁGENES MEJORADAS ===== */
+.elementor-widget-image {
+  margin: var(--spacing-lg) 0;
+  position: relative;
+}
+
+.elementor-widget-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  max-width: 100%;
+  object-fit: cover;
+  border: 2px solid rgba(157, 78, 221, 0.2);
+}
+
+.elementor-widget-image img:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+/* Imágenes principales con diseño especial */
+.elementor-element-812067d img,
+.elementor-element-39ac459 img {
+  max-width: 350px;
+  margin: 0 auto;
+  display: block;
+  border-radius: var(--border-radius-lg);
+  position: relative;
+}
+
+.elementor-element-812067d::before,
+.elementor-element-39ac459::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  border-radius: var(--border-radius-lg);
+  z-index: -1;
+  opacity: 0.3;
+  filter: blur(20px);
+}
+
+/* ===== BOTONES PREMIUM ===== */
+.elementor-button {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 18px 36px !important;
+  font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  box-shadow: var(--shadow-card) !important;
+  transition: var(--transition) !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  margin: var(--spacing-lg) 0 !important;
+  min-width: 220px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.elementor-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.elementor-button:hover::before {
+  left: 100%;
+}
+
+.elementor-button:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow: var(--shadow-hover) !important;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%) !important;
+}
+
+.elementor-button-text {
+  color: white !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TESTIMONIOS ELEGANTES ===== */
+.elementor-testimonial-wrapper {
+  background: var(--bg-card) !important;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  border: 1px solid rgba(157, 78, 221, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.elementor-testimonial-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.elementor-testimonial-wrapper:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.elementor-testimonial-content {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--text-gray) !important;
+  margin-bottom: var(--spacing-md);
+  font-style: italic;
+  position: relative;
+  padding: var(--spacing-sm) 0;
+}
+
+.elementor-testimonial-content::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--primary-color);
+  position: absolute;
+  top: -20px;
+  left: -15px;
+  opacity: 0.3;
+  font-family: serif;
+}
+
+.elementor-testimonial-image img {
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 3px solid var(--primary-color) !important;
+  box-shadow: var(--shadow-glow) !important;
+}
+
+.elementor-testimonial-name {
+  font-weight: 700 !important;
+  color: var(--text-white) !important;
+  font-size: 1.2rem !important;
+  margin-bottom: 4px !important;
+}
+
+.elementor-testimonial-job {
+  color: var(--text-muted) !important;
+  font-size: 0.9rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+/* ===== SECCIONES ESPECIALES ===== */
+.elementor-element-8ee014e {
+  background: radial-gradient(ellipse at center, rgba(157, 78, 221, 0.1) 0%, transparent 70%) !important;
+  border-radius: var(--border-radius-lg);
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-xl) var(--spacing-md);
+  position: relative;
+}
+
+.elementor-element-f836e13 h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.elementor-element-f836e13 h2::after {
+  content: '';
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  box-shadow: var(--shadow-glow);
+}
+
+/* ===== RESPONSIVE MOBILE-FIRST ===== */
+@media (max-width: 768px) {
+  :root {
+    --spacing-xs: 6px;
+    --spacing-sm: 12px;
+    --spacing-md: 18px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+  }
+  
+  .elementor {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .e-con.e-parent {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .elementor-testimonial-wrapper {
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+  }
+  
+  .elementor-button {
+    min-width: 200px !important;
+    padding: 16px 32px !important;
+    font-size: 1rem !important;
+  }
+  
+  .elementor-element-812067d img,
+  .elementor-element-39ac459 img {
+    max-width: 300px;
+  }
+  
+  .elementor-testimonial-image img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .e-con.e-parent {
+    padding: var(--spacing-md) var(--spacing-xs);
+  }
+  
+  .elementor-testimonial-wrapper {
+    padding: var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+  }
+  
+  .elementor-button {
+    min-width: 180px !important;
+    padding: 14px 28px !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .elementor-element-812067d img,
+  .elementor-element-39ac459 img {
+    max-width: 260px;
+  }
+  
+  h1.elementor-heading-title {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+}
+
+/* ===== ANIMACIONES SUAVES ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: var(--shadow-card);
+  }
+  50% {
+    box-shadow: var(--shadow-hover);
+  }
+}
+
+.elementor-widget {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.elementor-button {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.elementor-button:hover {
+  animation: none;
+}
+
+/* ===== EFECTOS ESPECIALES ===== */
+.elementor-widget-image:hover img {
+  filter: brightness(1.1) contrast(1.1);
+}
+
+/* Selección de texto personalizada */
+::selection {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* ===== WHATSAPP BUTTON MEJORADO ===== */
+.joinchat__button {
+  background: linear-gradient(135deg, #25D366, #128C7E) !important;
+  border-radius: 50% !important;
+  box-shadow: var(--shadow-card) !important;
+  transition: var(--transition) !important;
+  width: 65px !important;
+  height: 65px !important;
+}
+
+.joinchat__button:hover {
+  transform: scale(1.15) !important;
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5) !important;
+}
+
+/* ===== FORZAR ESTILOS OSCUROS ===== */
+.elementor-element,
+.elementor-widget,
+.elementor-widget-container {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* Asegurar texto blanco en todos lados */
+* {
+  color: var(--text-white) !important;
+}
+
+/* Excepciones específicas */
+.elementor-button-text {
+  color: white !important;
+}
+
+h1.elementor-heading-title {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 50%, var(--secondary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.elementor-testimonial-name {
+  color: var(--text-white) !important;
+}
+
+.elementor-testimonial-job {
+  color: var(--text-muted) !important;
+}
+
+h4.elementor-heading-title,
+p.elementor-heading-title {
+  color: var(--text-gray) !important;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .joinchat,
+  .elementor-button {
+    display: none !important;
+  }
+  
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: white !important;
+    color: black !important;
+  }
+}
